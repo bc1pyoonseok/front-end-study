@@ -34,3 +34,6 @@ console.log(user);
 //typeof operator
 console.log(typeof null); // this result is object but null is not a object
 console.log(typeof undefined);
+
+// concat between number and string is string
+console.log('hi' + PI + "no");
