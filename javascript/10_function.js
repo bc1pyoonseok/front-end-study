@@ -24,3 +24,4 @@ function noReturn () {
 }
 
 console.log(noReturn())
+ 
