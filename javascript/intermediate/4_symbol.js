@@ -8,10 +8,12 @@ console.log(a == b);
 
 const id = Symbol("id this is descriptsion");
 
+const field = "name";
 console.log(id);
 const user = {
   [id]: 20163175,
   yoonseok: "good",
+  [field]: "yoonseok",
 };
 console.log(user);
 console.log(user[id]);
@@ -29,4 +31,5 @@ const id2 = Symbol.for("id");
 //get description
 console.log(Symbol.keyFor(id1));
 
-console.log(id === id);
+console.log(typeof id1);
+console.log(id1 === id2);
