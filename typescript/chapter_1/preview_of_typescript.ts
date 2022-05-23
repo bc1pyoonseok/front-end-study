@@ -12,6 +12,8 @@ console.log(head, array)
 
 let a = 1
 let b = 2;
+// in typescript. you have to put ; before (, [, `, +, -, / these characters
+// fyi :https://www.clien.net/service/board/cm_app/14670849
 [a, b] = [b, a]
 console.log(a, b)
 const add = (a: number, b: number): number => {
