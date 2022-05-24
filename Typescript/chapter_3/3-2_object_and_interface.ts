@@ -21,7 +21,6 @@ let d: {
     name: string
     age: number
 } = new Person('you', 100)
-console.log(d)
 
 const printPerson = (person: { name: string, age: number }): void => {
     console.log(person)
