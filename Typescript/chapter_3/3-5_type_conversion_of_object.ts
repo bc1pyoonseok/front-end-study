@@ -6,5 +6,7 @@ console.log(Object.keys(person))
 // above code has an error 
 // because person is object type and it does not has 'name' property 
 // so you have to convert type
+
+// below method is called type assertion
 console.log((<{ name: string }>person).name)
 console.log((person as { name: string }).name)
