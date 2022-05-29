@@ -12,7 +12,7 @@ const array2 = new Array('dad', 'dwad', 'dwed')
 const mergedArray = ['start', ...array2, ...array1]
 console.log(mergedArray)
 
-export const range = (start: number, end: number): number[] => {
+const range = (start: number, end: number): number[] => {
     return start < end ? [start, ...range(start + 1, end)] : []
 }
 console.log(range(1, 10))
