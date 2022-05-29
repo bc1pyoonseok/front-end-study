@@ -49,5 +49,3 @@ numberStack.push(12)
 numberStack.push(10)
 console.log(numberStack.pop())
 numberStack.print()
-
-
