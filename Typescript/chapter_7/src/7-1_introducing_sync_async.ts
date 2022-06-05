@@ -17,10 +17,8 @@ setTimeout(() => { console.log(value) }, 1000)
 const readFilePromise = (filename: string): Promise<string> => {
     return new Promise<string>((resolve, reject) => {
         readFile(filename, (error: Error, buffer: Buffer) => {
-            if (error) {
-                reject(error)
-            }
-            resolve(buffer.toString() + " promise")
+            if (error) reject(error)
+            else resolve(buffer.toString() + " promise")
         })
     })
 }
@@ -36,10 +34,8 @@ console.log(`a: ${a}`)
 
 const PromizeAge = (age: number): Promise<string> => {
     return new Promise((resolve, reject) => {
-        if (age > 15) {
-            resolve(`you are ${age} years old!`)
-        }
-        reject(new Error(`you are too young`))
+        if (age > 15) resolve(`you are ${age} years old!`)
+        else reject(new Error(`you are too young`))
     })
 }
 
