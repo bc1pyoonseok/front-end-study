@@ -1,5 +1,4 @@
 import { readFile } from "fs"
-import { buffer } from "stream/consumers"
 
 const promise = (): Promise<string> => {
     return new Promise<string>((resolve, reject) => {
@@ -48,7 +47,11 @@ Promise.resolve(1)
 Promise.reject(new Error('error occurs'))
     .catch(value => console.log(value))
 
+Promise.resolve(1)
+    .then(() => Promise.resolve([1, 2, 3, 4]))
+    .then((value) => value)
+    .then((value) => console.log(`haha ${value}`))
 const booleanArray: boolean[] = [true, false, true, false, false]
 console.log(typeof true)
-let a = booleanArray.every(value => typeof value == 'boolean' )
+let a = booleanArray.every(value => typeof value == 'boolean')
 console.log(a)
