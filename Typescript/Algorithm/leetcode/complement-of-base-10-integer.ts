@@ -1,7 +1,7 @@
 function bitwiseComplement(n: number): number {
     let result: number = 0
     const decToBin = (n: number): number[] => {
-        const result = []
+        const result: number[] = []
         while (n) {
             result.unshift(n % 2)
             n = parseInt(`${n / 2}`)
