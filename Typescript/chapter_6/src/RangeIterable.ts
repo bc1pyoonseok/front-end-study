@@ -9,6 +9,8 @@ export class RangeIterable implements Iterable<number>{
         const End: number = this.end
         const iterator = {
             next() {
+                // in here, this is iterator not Rangeiterables
+                console.log(`this: ${Object.keys(this)}`)
                 let value = currentNum < End ? currentNum++ : undefined
                 let done: boolean = value == undefined
                 return { value, done }
