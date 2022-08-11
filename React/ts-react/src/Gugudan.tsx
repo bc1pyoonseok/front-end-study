@@ -8,7 +8,9 @@ const GuguDan: React.FC = () => {
     const [first, setFirst] = React.useState<number>(getRandomNumber())
     const [second, setSecond] = React.useState<number>(getRandomNumber())
     const [value, setValue] = React.useState<string>('')
-    const [result,setResult] =  React.useState<boolean>(false)
+    const [result,setResult] =  React.useState<boolean | string>('init')
+    const [correct,setCorrect] =  React.useState<number>(0)
+
     return (
         <>
             <div>what is {first} x {second}?</div>
@@ -19,6 +21,7 @@ const GuguDan: React.FC = () => {
                     setFirst(getRandomNumber())
                     setSecond(getRandomNumber())
                     setValue('')
+                    setCorrect(correct+1)
                 }
                 else{
                     setResult(false)
@@ -28,8 +31,11 @@ const GuguDan: React.FC = () => {
                 <button >input</button>
             </form>
             <div>
-                {result && <>correct!</>}
-                {!result && <>worng!</>}
+                {result==='init' && <>take a look</>}
+                {result===true && <>correct!</>}
+                {result===false && <>worng!</>}
+                <br/>
+                <>I got {correct} times!</>
             </div>
         </>
     );
