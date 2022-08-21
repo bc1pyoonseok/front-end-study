@@ -15,11 +15,15 @@ const GuguDan: React.FC = () => {
     e.preventDefault();
     if (parseInt(`${value}`) === first * second) {
       setResult(true);
-      setFirst(getRandomNumber());
-      setSecond(getRandomNumber());
+      // get old value
+      setFirst((preFirst) => getRandomNumber());
+      setSecond((preSecond) => getRandomNumber());
       setAnswer(first * second);
       setValue("");
-      setCorrect(correct + 1);
+      // the reason why I dont do setCorrect(correct+1) like this is that setState is async function.
+      // so If I call setState twice, it may not work I intended
+      // so you should do like this
+      setCorrect((correct_count) => correct_count + 1);
     } else {
       setResult(false);
     }
