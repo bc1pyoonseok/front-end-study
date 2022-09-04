@@ -1,4 +1,4 @@
-type voidFunction = () => void;
+export type voidFunction = () => void;
 interface Iexample {
   property: number;
   increase: voidFunction;
