@@ -3,7 +3,7 @@ function add(a: number, b: number): number {
   return a + b;
 }
 // function literal
-let a = function add(a: number, b: number): number {
+let c = function add(a: number, b: number): number {
   return a + b;
 };
 // if you use fuction literal, you can skip function name
